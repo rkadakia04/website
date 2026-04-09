@@ -29,7 +29,7 @@
     }
 
     .container {
-      max-width: 420px;
+      max-width: min(90vw, 600px);
       width: 100%;
       padding: 0 24px;
     }
@@ -46,7 +46,7 @@
     .bio,
     .bio p,
     .footer a {
-      font-size: clamp(14px, 2vh, 18px);
+      font-size: min(2.8vw, 20px);
       line-height: 1.2;
       letter-spacing: -0.1px;
     }
@@ -95,7 +95,7 @@
 
     @media (max-width: 540px) {
       .container {
-        padding: 0 20px;
+        padding: 0 28px;
       }
     }
   </style>
