@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rohan Kadakia</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      background: #ffffff;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #262626;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      max-width: 420px;
+      width: 100%;
+      padding: 0 24px;
+    }
+
+    .globe {
+      font-size: clamp(48px, 8vh, 72px);
+      line-height: 1.374;
+      letter-spacing: -1.98px;
+      margin-bottom: clamp(16px, 4vh, 36px);
+    }
+
+    .name,
+    .date,
+    .bio,
+    .bio p,
+    .footer a {
+      font-size: clamp(14px, 2vh, 18px);
+      line-height: 1.2;
+      letter-spacing: -0.1px;
+    }
+
+    .name {
+      margin-bottom: 1px;
+    }
+
+    .date {
+      color: #939393;
+    }
+
+    .bio {
+      margin-top: clamp(10px, 2.3vh, 21px);
+    }
+
+    .bio p {
+      margin-top: clamp(10px, 2.3vh, 21px);
+    }
+
+    .bio a {
+      color: #5199de;
+      text-decoration: none;
+    }
+
+    .bio a:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      margin-top: clamp(16px, 4vh, 36px);
+      display: flex;
+      gap: 14px;
+    }
+
+    .footer a {
+      color: #939393;
+      text-decoration: none;
+      letter-spacing: -0.495px;
+      transition: color 0.3s ease;
+    }
+
+    .footer a:hover {
+      color: #262626;
+    }
+
+    @media (max-width: 540px) {
+      .container {
+        padding: 0 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="globe">&#127758;</div>
+
+    <p class="name">Rohan Kadakia</p>
+    <p class="date">Updated April 8, 2026</p>
+
+    <div class="bio">
+      <p>I'm the founder of <a href="https://perfectvision.llc/" target="_blank">Perfect Vision</a>, a creative agency.</p>
+
+      <p>Clients include: Drake, Travis Scott, Polymarket, McDonald's, <span style="white-space:nowrap">Kai Cenat,</span> HOF Capital, NFL, <span style="white-space:nowrap">Shay Mitchell,</span> PgLang, Wieden+Kennedy, Sandbar, Chai Discovery.</p>
+
+      <p>I also build beautiful + viral consumer products.</p>
+
+      <p>I'm currently working on Pocket, a breathwork app.</p>
+
+      <p>I've previously sold brain fog gummies, gamified self care through software, and sold water for $200.</p>
+
+      <p>For all inquiries, <a href="mailto:rkadakia04@gmail.com">email me</a>.</p>
+    </div>
+
+    <div class="footer">
+      <a href="https://www.instagram.com/rokadakia/?hl=en" target="_blank">Instagram</a>
+      <a href="https://x.com/dvvdle?lang=en" target="_blank">X</a>
+    </div>
+  </main>
+</body>
+</html>
