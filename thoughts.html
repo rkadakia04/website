@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rohan Kadakia</title>
+  <title>Rohan Kadakia — Thoughts</title>
   <style>
     * {
       margin: 0;
@@ -20,21 +20,16 @@
       to { opacity: 1; }
     }
 
-    html, body {
-      height: 100%;
-      overflow: hidden;
-    }
-
     body {
       background: #ffffff;
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       color: #262626;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
-      align-items: center;
-      height: 100vh;
+      padding: clamp(48px, 12vh, 120px) 0;
       animation: fadeIn 0.6s ease both;
     }
 
@@ -52,20 +47,13 @@
       max-width: min(90vw, 420px);
       width: 100%;
       padding: 0 24px;
-    }
-
-    .globe {
-      font-size: min(8vw, 72px);
-      line-height: 1.374;
-      letter-spacing: -1.98px;
-      margin-bottom: min(4vw, 36px);
+      margin-block: auto;
     }
 
     .name,
     .header-nav a,
-    .bio,
-    .bio p,
-    .footer a {
+    .thoughts,
+    .thoughts p {
       font-size: min(2.8vw, 15px);
       line-height: 1.2;
       letter-spacing: -0.1px;
@@ -76,6 +64,16 @@
       flex-wrap: wrap;
       align-items: baseline;
       gap: 14px;
+    }
+
+    .name {
+      color: #939393;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .name:hover {
+      color: #262626;
     }
 
     .header-nav {
@@ -93,38 +91,25 @@
       color: #262626;
     }
 
-    .bio {
+    .header-nav a.active {
+      color: #262626;
+    }
+
+    .thoughts {
       margin-top: clamp(18px, 3.6vh, 32px);
     }
 
-    .bio p {
+    .thoughts p + p {
       margin-top: clamp(10px, 2.3vh, 21px);
     }
 
-    .bio a {
+    .thoughts a {
       color: #5199de;
       text-decoration: none;
     }
 
-    .bio a:hover {
+    .thoughts a:hover {
       text-decoration: underline;
-    }
-
-    .footer {
-      margin-top: clamp(16px, 4vh, 36px);
-      display: flex;
-      gap: 14px;
-    }
-
-    .footer a {
-      color: #939393;
-      text-decoration: none;
-      letter-spacing: -0.495px;
-      transition: color 0.3s ease;
-    }
-
-    .footer a:hover {
-      color: #262626;
     }
 
     @media (max-width: 540px) {
@@ -136,31 +121,24 @@
 </head>
 <body>
   <main class="container">
-    <div class="globe">&#127758;</div>
-
     <div class="header">
-      <span class="name">Rohan Kadakia</span>
+      <a class="name" href="index.html">Rohan Kadakia</a>
       <nav class="header-nav">
         <a href="timeline.html">Timeline</a>
-        <a href="thoughts.html">Thoughts</a>
+        <a href="thoughts.html" class="active">Thoughts</a>
       </nav>
     </div>
 
-    <div class="bio">
-      <p>Founder, <a href="https://internetlabs.co" target="_blank">Internet</a></p>
+    <div class="thoughts">
+      <p>I enjoy building products with great design taste.</p>
 
-      <p>We build viral consumer products and software.</p>
+      <p>As a philosophy for life, I believe in doing the work you love, not thinking too much or being too practical, and putting yourself out there. This is what I've found leads to the most joy, success, and connection.</p>
 
-      <p>Previously ran <a href="https://perfectvision.llc/" target="_blank">Perfect Vision</a>, a design studio.</p>
+      <p>In addition to this, I believe in experiencing as many extremes as possible, whether they're positive or negative, because that's what makes your life, yours. This also allows you to move through life at a much faster rate than others. Meeting cool people is one of the highest-leverage things that I love to do.</p>
 
-      <p>Clients include: <span style="white-space:nowrap">Drake,</span> <span style="white-space:nowrap">Polymarket,</span> <span style="white-space:nowrap">Travis Scott,</span> <span style="white-space:nowrap">McDonald's,</span> <span style="white-space:nowrap">HOF Capital,</span> <span style="white-space:nowrap">NFL,</span> <span style="white-space:nowrap">Shay Mitchell,</span> <span style="white-space:nowrap">Chai Discovery,</span> <span style="white-space:nowrap">PgLang,</span> <span style="white-space:nowrap">Wieden+Kennedy,</span> <span style="white-space:nowrap">Sandbar</span></p>
+      <p>With <a href="https://internetlabs.co" target="_blank">Internet</a>, I want the company to be known as the source of thought and taste for creating products, whether those are products we create ourselves or ones we make in partnership with companies or celebrities. There are ideas in wellness, social, philanthropy, and more that I'll do my best to make sure we execute on.</p>
 
-      <p>For all inquiries, or if you just want to say hi, <a href="mailto:rkadakia04@gmail.com">email me</a>.</p>
-    </div>
-
-    <div class="footer">
-      <a href="https://www.instagram.com/rokadakia/?hl=en" target="_blank">Instagram</a>
-      <a href="https://x.com/dvvdle?lang=en" target="_blank">X</a>
+      <p>Ultimately, I want to live the most fulfilling life possible and be a source of joy and strength to those around me.</p>
     </div>
   </main>
   <script>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rohan Kadakia — Timeline</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    @view-transition {
+      navigation: auto;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    body {
+      background: #ffffff;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #262626;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: clamp(48px, 12vh, 120px) 0;
+      animation: fadeIn 0.6s ease both;
+    }
+
+    /* Skip the load fade-in when arriving via a tab-switch view transition,
+       so the cross-fade handles the motion cleanly. */
+    html.vt-nav body {
+      animation: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      body { animation: none; }
+    }
+
+    .container {
+      max-width: min(90vw, 420px);
+      width: 100%;
+      padding: 0 24px;
+      margin-block: auto;
+    }
+
+    .name,
+    .header-nav a,
+    .timeline,
+    .timeline p,
+    .year {
+      font-size: min(2.8vw, 15px);
+      line-height: 1.2;
+      letter-spacing: -0.1px;
+    }
+
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 14px;
+    }
+
+    .name {
+      color: #939393;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .name:hover {
+      color: #262626;
+    }
+
+    .header-nav {
+      display: flex;
+      gap: 14px;
+    }
+
+    .header-nav a {
+      color: #939393;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .header-nav a:hover {
+      color: #262626;
+    }
+
+    .header-nav a.active {
+      color: #262626;
+    }
+
+    .timeline {
+      margin-top: clamp(18px, 3.6vh, 32px);
+    }
+
+    .entry {
+      margin-top: clamp(18px, 3.6vh, 32px);
+    }
+
+    .entry:first-child {
+      margin-top: 0;
+    }
+
+    .year {
+      color: #939393;
+    }
+
+    .timeline a {
+      color: #5199de;
+      text-decoration: none;
+    }
+
+    .timeline a:hover {
+      text-decoration: underline;
+    }
+
+    .timeline p + p {
+      margin-top: clamp(10px, 2.3vh, 21px);
+    }
+
+    @media (max-width: 540px) {
+      .container {
+        padding: 0 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="header">
+      <a class="name" href="index.html">Rohan Kadakia</a>
+      <nav class="header-nav">
+        <a href="timeline.html" class="active">Timeline</a>
+        <a href="thoughts.html">Thoughts</a>
+      </nav>
+    </div>
+
+    <div class="timeline">
+      <section class="entry">
+        <p class="year">2022</p>
+        <p>This was my senior year of high school. I designed for fun every day, and through that, designed merch for Baby Keem's collaboration with APlasticPlant.</p>
+        <p>I continued designing and sharing my work on X, with no greater incentive or motive than to have fun.</p>
+      </section>
+
+      <section class="entry">
+        <p class="year">2023</p>
+        <p>Formally started taking on brand and web client work.</p>
+        <p>Used the built-up design taste to launch e-commerce stores selling condoms, skincare, hoodies, and other crazy products on the internet.</p>
+        <p>Worked with Maisie Williams on branding and design for her film production company, Rapt.</p>
+      </section>
+
+      <section class="entry">
+        <p class="year">2024</p>
+        <p>Tricked the internet into thinking that there is a "Fanum McDonald's Meal."</p>
+        <p>Later that year, Wieden+Kennedy reached out to turn my fake McDonald's meal into a reality for Kai Cenat.</p>
+        <p>Got offered a job to be Drake's Art Director.</p>
+      </section>
+
+      <section class="entry">
+        <p class="year">2025</p>
+        <p>I continued the design agency work throughout the year, working with artists, founders, and startups.</p>
+        <p>Also worked on various marketing stunts. One of them included selling water for $200.</p>
+      </section>
+
+      <section class="entry">
+        <p class="year">2026</p>
+        <p>Around this time, I dealt with some anxiety and confusion internally. Rather than shying away from it, I released a full-length film called Dolce Vita in hopes of helping or inspiring someone else.</p>
+        <p>Here's the <a href="https://www.youtube.com/watch?v=yEvOzbZ1DVM&t=0s" target="_blank">trailer</a> and <a href="https://www.youtube.com/watch?v=43bMlGA2m-Q&t=0s" target="_blank">movie</a> if you'd like to watch.</p>
+        <p>I launched <a href="https://internetlabs.co" target="_blank">Internet</a>, a company building viral consumer products and software, with the goal of bringing joy and beauty to how other people experience software and products on the internet.</p>
+      </section>
+    </div>
+  </main>
+  <script>
+    // On a cross-document view transition, mark the incoming page so its
+    // load fade-in is skipped and the cross-fade runs cleanly.
+    window.addEventListener('pagereveal', (e) => {
+      if (e.viewTransition) document.documentElement.classList.add('vt-nav');
+    });
+  </script>
+</body>
+</html>
