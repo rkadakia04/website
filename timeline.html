@@ -11,15 +11,6 @@
       box-sizing: border-box;
     }
 
-    @view-transition {
-      navigation: auto;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
     body {
       background: #ffffff;
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -30,17 +21,16 @@
       display: flex;
       justify-content: center;
       padding: clamp(48px, 12vh, 120px) 0;
-      animation: fadeIn 0.6s ease both;
+      transition: opacity 0.32s ease-out;
     }
 
-    /* Skip the load fade-in when arriving via a tab-switch view transition,
-       so the cross-fade handles the motion cleanly. */
-    html.vt-nav body {
-      animation: none;
+    .js body {
+      opacity: 0;
     }
 
     @media (prefers-reduced-motion: reduce) {
-      body { animation: none; }
+      .js body { opacity: 1; }
+      body { transition: none; }
     }
 
     .container {
@@ -131,6 +121,7 @@
       }
     }
   </style>
+  <script src="transition.js"></script>
 </head>
 <body>
   <main class="container">
@@ -177,12 +168,5 @@
       </section>
     </div>
   </main>
-  <script>
-    // On a cross-document view transition, mark the incoming page so its
-    // load fade-in is skipped and the cross-fade runs cleanly.
-    window.addEventListener('pagereveal', (e) => {
-      if (e.viewTransition) document.documentElement.classList.add('vt-nav');
-    });
-  </script>
 </body>
 </html>
