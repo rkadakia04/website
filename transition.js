@@ -2,7 +2,7 @@
 // On load: fade in from white. On internal-link click: fade out to white, then navigate.
 // The new page fades in on load, producing a fade-out -> white -> fade-in sequence.
 (function () {
-  var DURATION = 200; // ms — fade-out time; matches the ease-in duration set on click
+  var DURATION = 260; // ms — fade-out time; matches the duration set on click
   document.documentElement.classList.add('js');
 
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -38,8 +38,8 @@
     if (reduce.matches) return; // respect reduced-motion: navigate normally
 
     e.preventDefault();
-    // Accelerate into the white; the next page decelerates out of it (CSS ease-out).
-    document.body.style.transition = 'opacity ' + DURATION + 'ms ease-in';
+    // Ease gently into the white; the next page decelerates out of it (CSS ease-out).
+    document.body.style.transition = 'opacity ' + DURATION + 'ms ease-in-out';
     document.body.style.opacity = '0';
     setTimeout(function () { location.href = a.href; }, DURATION);
   });
