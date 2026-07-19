@@ -11,16 +11,21 @@
       box-sizing: border-box;
     }
 
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+
     body {
       background: #ffffff;
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       color: #262626;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      min-height: 100vh;
       display: flex;
       justify-content: center;
-      padding: clamp(48px, 12vh, 120px) 0;
+      align-items: center;
+      height: 100vh;
       transition: opacity 0.42s ease-out;
     }
 
@@ -37,7 +42,6 @@
       max-width: min(90vw, 420px);
       width: 100%;
       padding: 0 24px;
-      margin-block: auto;
     }
 
     .name,
