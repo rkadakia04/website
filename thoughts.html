@@ -13,7 +13,7 @@
 
     :root {
       /* Space above the globe = pinned header offset. Reused as equal bottom padding. */
-      --anchor: calc(50vh - 100px - 1.374 * clamp(61px, 8vw, 72px) - min(4vw, 36px));
+      --anchor: calc(50vh - 100px - 1.374 * min(8vw, 72px) - min(4vw, 36px));
     }
 
     body {
@@ -46,7 +46,7 @@
     }
 
     .globe {
-      font-size: clamp(61px, 8vw, 72px);
+      font-size: min(8vw, 72px);
       line-height: 1.374;
       letter-spacing: -1.98px;
       margin-bottom: min(4vw, 36px);
