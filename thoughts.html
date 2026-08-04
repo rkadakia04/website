@@ -57,7 +57,7 @@
     .thoughts,
     .thoughts p {
       font-size: min(2.8vw, 15px);
-      line-height: 1.2;
+      line-height: 1.25;
       letter-spacing: -0.1px;
     }
 
@@ -101,6 +101,10 @@
       margin-top: clamp(18px, 3.6vh, 32px);
     }
 
+    .thoughts p {
+      color: #333333;
+    }
+
     .thoughts p + p {
       margin-top: clamp(10px, 2.3vh, 21px);
     }
@@ -118,6 +122,8 @@
       .container {
         padding-left: 36px;
         padding-right: 36px;
+        /* option 2: tighten column so the widest line fills it (optical centering) */
+        max-width: calc(65vw + 72px);
       }
     }
   </style>

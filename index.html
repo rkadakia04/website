@@ -62,7 +62,7 @@
     .bio p,
     .footer a {
       font-size: min(2.8vw, 15px);
-      line-height: 1.2;
+      line-height: 1.25;
       letter-spacing: -0.1px;
     }
 
@@ -94,6 +94,7 @@
 
     .bio p {
       margin-top: clamp(10px, 2.3vh, 21px);
+      color: #333333;
     }
 
     .bio a {
@@ -126,6 +127,8 @@
       .container {
         padding-left: 36px;
         padding-right: 36px;
+        /* option 2: tighten column so the widest line fills it (optical centering) */
+        max-width: calc(65vw + 72px);
       }
     }
   </style>

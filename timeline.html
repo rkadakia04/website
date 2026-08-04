@@ -58,7 +58,7 @@
     .timeline p,
     .year {
       font-size: min(2.8vw, 15px);
-      line-height: 1.2;
+      line-height: 1.25;
       letter-spacing: -0.1px;
     }
 
@@ -123,6 +123,10 @@
       text-decoration: underline;
     }
 
+    .timeline p:not(.year) {
+      color: #333333;
+    }
+
     .timeline p + p {
       margin-top: clamp(10px, 2.3vh, 21px);
     }
@@ -131,6 +135,8 @@
       .container {
         padding-left: 36px;
         padding-right: 36px;
+        /* option 2: tighten column so the widest line fills it (optical centering) */
+        max-width: calc(65vw + 72px);
       }
     }
   </style>
