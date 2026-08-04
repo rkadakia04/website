@@ -11,8 +11,12 @@
       box-sizing: border-box;
     }
 
+    :root {
+      /* Space above the globe = pinned header offset. Reused as equal bottom padding. */
+      --anchor: calc(50vh - 100px - 1.374 * min(8vw, 72px) - min(4vw, 36px));
+    }
+
     html, body {
-      height: 100%;
       overflow: hidden;
     }
 
@@ -22,10 +26,10 @@
       color: #262626;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      height: 100vh;
       display: flex;
       justify-content: center;
-      align-items: center;
-      height: 100vh;
+      align-items: flex-start;
       transition: opacity 0.42s ease-out;
     }
 
@@ -41,7 +45,8 @@
     .container {
       max-width: min(90vw, 420px);
       width: 100%;
-      padding: 0 24px;
+      /* Pinned header offset on top; equal space on the bottom. */
+      padding: var(--anchor) 24px var(--anchor);
     }
 
     .globe {
@@ -57,7 +62,7 @@
     .bio p,
     .footer a {
       font-size: min(2.8vw, 15px);
-      line-height: 1.2;
+      line-height: 1.25;
       letter-spacing: -0.1px;
     }
 
@@ -89,6 +94,7 @@
 
     .bio p {
       margin-top: clamp(10px, 2.3vh, 21px);
+      color: #333333;
     }
 
     .bio a {
@@ -119,7 +125,8 @@
 
     @media (max-width: 540px) {
       .container {
-        padding: 0 28px;
+        padding-left: 36px;
+        padding-right: 36px;
       }
     }
   </style>
@@ -140,11 +147,11 @@
     <div class="bio">
       <p>Founder, <a href="https://internetlabs.co" target="_blank">Internet</a></p>
 
-      <p>We build viral consumer products and software.</p>
+      <p>We are a creative venture and holding company<br>building consumer software and products.</p>
 
-      <p>Previously ran <a href="https://perfectvision.llc/" target="_blank">Perfect Vision</a>, a design studio.</p>
+      <p>Previously ran <a href="https://perfectvision.llc/" target="_blank">Perfect Vision</a>, a design firm.</p>
 
-      <p>Clients include: <span style="white-space:nowrap">Drake,</span> <span style="white-space:nowrap">Polymarket,</span> <span style="white-space:nowrap">Travis Scott,</span> <span style="white-space:nowrap">McDonald's,</span> <span style="white-space:nowrap">HOF Capital,</span> <span style="white-space:nowrap">NFL,</span> <span style="white-space:nowrap">Shay Mitchell,</span> <span style="white-space:nowrap">Chai Discovery,</span> <span style="white-space:nowrap">PgLang,</span> <span style="white-space:nowrap">Wieden+Kennedy,</span> <span style="white-space:nowrap">Sandbar</span></p>
+      <p>Clients include: <span style="white-space:nowrap">Drake,</span> <span style="white-space:nowrap">McDonald's,</span> <span style="white-space:nowrap">Travis Scott,</span> <span style="white-space:nowrap">Polymarket,</span> <span style="white-space:nowrap">HOF Capital,</span> <span style="white-space:nowrap">NFL,</span> <span style="white-space:nowrap">Shay Mitchell,</span> <span style="white-space:nowrap">Chai Discovery,</span> <span style="white-space:nowrap">PgLang,</span> <span style="white-space:nowrap">Wieden+Kennedy,</span> <span style="white-space:nowrap">Sandbar</span></p>
 
       <p>For all inquiries, or just to say hi, <a href="mailto:rkadakia04@gmail.com">email me</a>.</p>
     </div>

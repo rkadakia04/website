@@ -11,9 +11,9 @@
       box-sizing: border-box;
     }
 
-    html, body {
-      height: 100%;
-      overflow: hidden;
+    :root {
+      /* Space above the globe = pinned header offset. Reused as equal bottom padding. */
+      --anchor: calc(50vh - 100px - 1.374 * min(8vw, 72px) - min(4vw, 36px));
     }
 
     body {
@@ -22,10 +22,10 @@
       color: #262626;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
-      align-items: center;
-      height: 100vh;
+      align-items: flex-start;
       transition: opacity 0.42s ease-out;
     }
 
@@ -41,7 +41,15 @@
     .container {
       max-width: min(90vw, 420px);
       width: 100%;
-      padding: 0 24px;
+      /* Pinned header offset on top; equal space on the bottom. */
+      padding: var(--anchor) 24px var(--anchor);
+    }
+
+    .globe {
+      font-size: min(8vw, 72px);
+      line-height: 1.374;
+      letter-spacing: -1.98px;
+      margin-bottom: min(4vw, 36px);
     }
 
     .name,
@@ -49,7 +57,7 @@
     .thoughts,
     .thoughts p {
       font-size: min(2.8vw, 15px);
-      line-height: 1.2;
+      line-height: 1.25;
       letter-spacing: -0.1px;
     }
 
@@ -93,6 +101,10 @@
       margin-top: clamp(18px, 3.6vh, 32px);
     }
 
+    .thoughts p {
+      color: #333333;
+    }
+
     .thoughts p + p {
       margin-top: clamp(10px, 2.3vh, 21px);
     }
@@ -108,7 +120,8 @@
 
     @media (max-width: 540px) {
       .container {
-        padding: 0 28px;
+        padding-left: 36px;
+        padding-right: 36px;
       }
     }
   </style>
@@ -116,6 +129,8 @@
 </head>
 <body>
   <main class="container">
+    <div class="globe">&#127758;</div>
+
     <div class="header">
       <a class="name" href="index.html">Rohan Kadakia</a>
       <nav class="header-nav">
@@ -129,7 +144,7 @@
 
       <p>As a philosophy for life, I believe in doing the work you love, not thinking too much or being too practical, and putting yourself out there. This is what I've found leads to the most joy, success, and connection.</p>
 
-      <p>In addition to this, I believe in experiencing as many extremes as possible, whether they're positive or negative, because that's what makes your life, yours. This also allows you to move through life at a much faster rate than others. Meeting cool people is refreshing, and something I love to do.</p>
+      <p>This also allows you to move through life at a much faster rate than others. Meeting cool people is refreshing, and something I love to do.</p>
 
       <p>With <a href="https://internetlabs.co" target="_blank">Internet</a>, I want the company to be known as the source of thought and taste for creating products, whether those are products we create ourselves or ones we make in partnership with companies or celebrities.</p>
 
