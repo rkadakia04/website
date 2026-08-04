@@ -11,9 +11,9 @@
       box-sizing: border-box;
     }
 
-    html, body {
-      height: 100%;
-      overflow: hidden;
+    :root {
+      /* Space above the globe = pinned header offset. Reused as equal bottom padding. */
+      --anchor: calc(50vh - 100px - 1.374 * clamp(61px, 8vw, 72px) - min(4vw, 36px));
     }
 
     body {
@@ -22,10 +22,10 @@
       color: #262626;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      height: 100vh;
       transition: opacity 0.42s ease-out;
     }
 
@@ -41,8 +41,8 @@
     .container {
       max-width: min(90vw, 420px);
       width: 100%;
-      /* Anchor globe + header so the header sits at the same offset on every page. */
-      padding: calc(50vh - 100px - 1.374 * clamp(61px, 8vw, 72px) - min(4vw, 36px)) 24px 0;
+      /* Pinned header offset on top; equal space on the bottom. */
+      padding: var(--anchor) 24px var(--anchor);
     }
 
     .globe {

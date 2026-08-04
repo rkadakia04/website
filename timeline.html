@@ -11,6 +11,11 @@
       box-sizing: border-box;
     }
 
+    :root {
+      /* Space above the globe = pinned header offset. Reused as equal bottom padding. */
+      --anchor: calc(50vh - 100px - 1.374 * clamp(61px, 8vw, 72px) - min(4vw, 36px));
+    }
+
     body {
       background: #ffffff;
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -20,7 +25,7 @@
       min-height: 100vh;
       display: flex;
       justify-content: center;
-      padding: clamp(48px, 12vh, 120px) 0;
+      align-items: flex-start;
       transition: opacity 0.42s ease-out;
     }
 
@@ -36,9 +41,8 @@
     .container {
       max-width: min(90vw, 420px);
       width: 100%;
-      padding: 0 24px;
-      /* Center the block when it fits; collapse to top-aligned scroll when it overflows. */
-      margin-block: auto;
+      /* Pinned header offset on top; equal space on the bottom. */
+      padding: var(--anchor) 24px var(--anchor);
     }
 
     .globe {
