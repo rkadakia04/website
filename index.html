@@ -45,7 +45,8 @@
     }
 
     .globe {
-      font-size: min(8vw, 72px);
+      /* Floor at its iPad-width size (~61px at 768px) so it never shrinks further. */
+      font-size: clamp(61px, 8vw, 72px);
       line-height: 1.374;
       letter-spacing: -1.98px;
       margin-bottom: min(4vw, 36px);
@@ -140,7 +141,7 @@
     <div class="bio">
       <p>Founder, <a href="https://internetlabs.co" target="_blank">Internet</a></p>
 
-      <p>We build viral consumer products and software.</p>
+      <p>We are a creative venture and holding company building consumer software and products.</p>
 
       <p>Previously ran <a href="https://perfectvision.llc/" target="_blank">Perfect Vision</a>, a design studio.</p>
 

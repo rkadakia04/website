@@ -20,7 +20,8 @@
       min-height: 100vh;
       display: flex;
       justify-content: center;
-      padding: clamp(48px, 12vh, 120px) 0;
+      align-items: flex-start;
+      padding-bottom: clamp(48px, 12vh, 120px);
       transition: opacity 0.42s ease-out;
     }
 
@@ -36,8 +37,8 @@
     .container {
       max-width: min(90vw, 420px);
       width: 100%;
-      padding: 0 24px;
-      margin-block: auto;
+      /* Pin the header to the same offset as the home page. */
+      padding: calc(50vh - 100px) 24px 0;
     }
 
     .name,
@@ -117,7 +118,8 @@
 
     @media (max-width: 540px) {
       .container {
-        padding: 0 28px;
+        padding-left: 28px;
+        padding-right: 28px;
       }
     }
   </style>
