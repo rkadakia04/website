@@ -140,6 +140,41 @@
         max-width: calc(65vw + 72px);
       }
     }
+
+    .rotate-notice {
+      display: none;
+    }
+
+    /* Phones held sideways: hide the site and ask to rotate back. */
+    @media (orientation: landscape) and (max-height: 500px) {
+      .container {
+        display: none;
+      }
+
+      .rotate-notice {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        position: fixed;
+        inset: 0;
+        background: #ffffff;
+        text-align: center;
+        padding: 0 40px;
+      }
+
+      .rotate-globe {
+        font-size: 56px;
+        line-height: 1;
+      }
+
+      .rotate-notice p {
+        font-size: 15px;
+        letter-spacing: -0.1px;
+        color: #939393;
+      }
+    }
   </style>
   <script src="transition.js"></script>
 </head>
@@ -190,5 +225,10 @@
       </section>
     </div>
   </main>
+
+  <div class="rotate-notice" aria-hidden="true">
+    <div class="rotate-globe">&#127758;</div>
+    <p>Please rotate your phone upright.</p>
+  </div>
 </body>
 </html>
