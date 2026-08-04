@@ -95,6 +95,7 @@
     .bio p {
       margin-top: clamp(10px, 2.3vh, 21px);
       color: #333333;
+      text-wrap: pretty;
     }
 
     .bio a {
@@ -127,6 +128,8 @@
       .container {
         padding-left: 36px;
         padding-right: 36px;
+        /* option 2: short home lines fill the tighter column, centering the block */
+        max-width: calc(65vw + 72px);
       }
     }
   </style>
