@@ -37,8 +37,15 @@
     .container {
       max-width: min(90vw, 420px);
       width: 100%;
-      /* Pin the header to the same offset as the home page. */
-      padding: calc(50vh - 100px) 24px 0;
+      /* Anchor globe + header so the header sits at the same offset as the home page. */
+      padding: calc(50vh - 100px - 1.374 * clamp(61px, 8vw, 72px) - min(4vw, 36px)) 24px 0;
+    }
+
+    .globe {
+      font-size: clamp(61px, 8vw, 72px);
+      line-height: 1.374;
+      letter-spacing: -1.98px;
+      margin-bottom: min(4vw, 36px);
     }
 
     .name,
@@ -127,6 +134,8 @@
 </head>
 <body>
   <main class="container">
+    <div class="globe">&#127758;</div>
+
     <div class="header">
       <a class="name" href="index.html">Rohan Kadakia</a>
       <nav class="header-nav">

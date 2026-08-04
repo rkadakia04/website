@@ -24,7 +24,7 @@
       -moz-osx-font-smoothing: grayscale;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       height: 100vh;
       transition: opacity 0.42s ease-out;
     }
@@ -41,7 +41,8 @@
     .container {
       max-width: min(90vw, 420px);
       width: 100%;
-      padding: 0 24px;
+      /* Anchor globe + header so the header sits at the same offset on every page. */
+      padding: calc(50vh - 100px - 1.374 * clamp(61px, 8vw, 72px) - min(4vw, 36px)) 24px 0;
     }
 
     .globe {
@@ -120,7 +121,8 @@
 
     @media (max-width: 540px) {
       .container {
-        padding: 0 28px;
+        padding-left: 28px;
+        padding-right: 28px;
       }
     }
   </style>
@@ -145,7 +147,7 @@
 
       <p>Previously ran <a href="https://perfectvision.llc/" target="_blank">Perfect Vision</a>, a design studio.</p>
 
-      <p>Clients include: <span style="white-space:nowrap">Drake,</span> <span style="white-space:nowrap">Polymarket,</span> <span style="white-space:nowrap">Travis Scott,</span> <span style="white-space:nowrap">McDonald's,</span> <span style="white-space:nowrap">HOF Capital,</span> <span style="white-space:nowrap">NFL,</span> <span style="white-space:nowrap">Shay Mitchell,</span> <span style="white-space:nowrap">Chai Discovery,</span> <span style="white-space:nowrap">PgLang,</span> <span style="white-space:nowrap">Wieden+Kennedy,</span> <span style="white-space:nowrap">Sandbar</span></p>
+      <p>Clients include: <span style="white-space:nowrap">Drake,</span> <span style="white-space:nowrap">McDonald's,</span> <span style="white-space:nowrap">Travis Scott,</span> <span style="white-space:nowrap">Polymarket,</span> <span style="white-space:nowrap">HOF Capital,</span> <span style="white-space:nowrap">NFL,</span> <span style="white-space:nowrap">Shay Mitchell,</span> <span style="white-space:nowrap">Chai Discovery,</span> <span style="white-space:nowrap">PgLang,</span> <span style="white-space:nowrap">Wieden+Kennedy,</span> <span style="white-space:nowrap">Sandbar</span></p>
 
       <p>For all inquiries, or just to say hi, <a href="mailto:rkadakia04@gmail.com">email me</a>.</p>
     </div>
