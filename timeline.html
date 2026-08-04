@@ -20,8 +20,7 @@
       min-height: 100vh;
       display: flex;
       justify-content: center;
-      align-items: flex-start;
-      padding-bottom: clamp(48px, 12vh, 120px);
+      padding: clamp(48px, 12vh, 120px) 0;
       transition: opacity 0.42s ease-out;
     }
 
@@ -37,8 +36,9 @@
     .container {
       max-width: min(90vw, 420px);
       width: 100%;
-      /* Anchor globe + header so the header sits at the same offset as the home page. */
-      padding: calc(50vh - 100px - 1.374 * clamp(61px, 8vw, 72px) - min(4vw, 36px)) 24px 0;
+      padding: 0 24px;
+      /* Center the block when it fits; collapse to top-aligned scroll when it overflows. */
+      margin-block: auto;
     }
 
     .globe {
