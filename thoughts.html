@@ -36,12 +36,6 @@
     @media (prefers-reduced-motion: reduce) {
       .js body { opacity: 1; }
       body { transition: none; }
-      .container { animation: none; }
-    }
-
-    @keyframes appear {
-      from { transform: translateY(12px); }
-      to { transform: translateY(0); }
     }
 
     .container {
@@ -49,7 +43,6 @@
       width: 100%;
       /* Pinned header offset on top; equal space on the bottom. */
       padding: var(--anchor) 24px var(--anchor);
-      animation: appear 0.55s ease-out both;
     }
 
     .globe {
